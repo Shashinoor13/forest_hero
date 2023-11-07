@@ -43,22 +43,20 @@ class Hero:
 
     def increase_level(self, xp: int):
         if self.xp + xp >= 100:
-            print("\n ------------------------------------ \n")
+            print("------------------------------------ \n")
             print("Level up")
-            print("\n ------------------------------------ \n")
+            print("\n------------------------------------")
             self.level += 1
             self.xp = 0
 
     def show_all(self):
-        print("\n ------------------------------------ \n")
+        print("------------------------------------ \n")
         print("Name : ", self.name)
         print("Health : ", self.health)
         print("Level : ", self.level)
         print("XP : ", self.xp)
-        print("Weapons : ")
-        for weapon in self.weapons:
-            print(weapon.name)
-        print("\n ------------------------------------ \n")
+        print("Weapons : ", self.weapons)
+        print("\n------------------------------------")
 
 
 """
