@@ -1,4 +1,5 @@
-from weapons import Weapons
+from utils.utils import Helpers
+from models.weapons import Weapons
 
 MAX_WEAPON_LIMIT = 2
 MAX_HEALTH_LIMIT = 500
@@ -44,7 +45,7 @@ class Hero:
     def increase_level(self, xp: int):
         if self.xp + xp >= 100:
             print("------------------------------------ \n")
-            print("Level up")
+            Helpers.printer("LEVEL UP", True, "green")
             print("\n------------------------------------")
             self.level += 1
             self.xp = 0
