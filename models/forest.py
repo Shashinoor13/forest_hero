@@ -1,4 +1,9 @@
 import random
+from data.items import ItemData
+from functions.data_adapter import DataAdapter
+from models.items import Items
+
+from models.mobs import Mobs
 
 
 class Forest:
@@ -8,6 +13,7 @@ class Forest:
         self.mobs = []
         self.trees = []
         self.items = []
+        self.item_data = ItemData()
         self.generate_forest()
 
     def generate_forest(self):
@@ -26,10 +32,14 @@ class Forest:
         pass
 
     def generate_mob(self):
-        pass
+        self.mobs.append(
+            DataAdapter().MobDataAdapt(self.item_data.mobs[random.randint(1, 5)])
+        )
 
     def generate_item(self):
-        pass
+        self.items.append(
+            DataAdapter().ItemDataAdapt(self.item_data.items[random.randint(1, 5)])
+        )
 
 
 """

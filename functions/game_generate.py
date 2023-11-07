@@ -1,4 +1,5 @@
 from anyio import sleep
+from models.forest import Forest
 from models.hero import Hero
 from models.mobs import Mobs
 from utils.utils import Helpers
@@ -32,6 +33,8 @@ class GameGenerate:
 
         Helpers.printer("Press CTRL+C to exit \n", False, "Green")
         Helpers.printer("Welcome To The Jungle\n", False, "Green")
+
+        forest = Forest(1)
         print("You see a mob")
         print("The mob has ", m.hp, " health")
         print("You have ", main_character.health, " health")
